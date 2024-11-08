@@ -1,5 +1,3 @@
-
-```markdown
 # HRMS - Human Resource Management System
 
 This project is a **Human Resource Management System** (HRMS) built with Django, designed to manage employee data, track attendance, and handle related HR functionalities such as adding employees and viewing attendance.
