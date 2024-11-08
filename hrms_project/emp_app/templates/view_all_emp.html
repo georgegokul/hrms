@@ -1,0 +1,30 @@
+{% extends "index.html" %}
+
+{% block title %}All Employee Details{% endblock %}
+
+{% block heading %}All Employee Details{% endblock %}
+
+{% block content %}
+<table class="table table-dark">
+    <thead>
+        <tr>
+            <th scope="col">#</th>
+            <th scope="col">First Name</th>
+            <th scope="col">Last Name</th>
+            <th scope="col">Salary</th>
+            <th scope="col">Department</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for emp in emps %}
+            <tr>
+                <th scope="row">{{ emp.id }}</th>
+                <td>{{ emp.first_name }}</td>
+                <td>{{ emp.last_name }}</td>
+                <td>{{ emp.salary }}</td>
+                <td>{{ emp.dept.name }}</td>
+            </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

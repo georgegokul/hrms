@@ -1,0 +1,25 @@
+{% extends "index.html" %}
+
+{% block title %}Add Employee{% endblock %}
+
+{% block heading %}Add An Employee!{% endblock %}
+
+{% block content %}
+<form action="/add_emp" method="post">
+    {% csrf_token %}
+    <label for="first_name">First Name</label><br>
+    <input type="text" id="first_name" name="first_name" value="{{ first_name }}" required><br>
+
+    <label for="last_name">Last Name</label><br>
+    <input type="text" id="last_name" name="last_name" value="{{ last_name }}" required><br>
+
+    <label for="salary">Salary</label><br>
+    <input type="number" id="salary" name="salary" value="{{ salary }}" required><br>
+
+    <label for="dept">Department</label><br>
+    <input type="number" id="dept" name="dept" value="{{ dept }}" required><br>
+
+    <hr>
+    <button type="submit">Submit</button>
+</form>
+{% endblock %}
